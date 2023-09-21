@@ -1,2 +1,2 @@
 # shortener-api
-This api receive and URL in the payload and return a shortener URL, when try to consume a shortener URL it redirect to an original URL
+This API receives and URL in the payload and returns a shortener URL, when a client tries to consume a shortener URL it redirects to an original URL
