@@ -1,0 +1,25 @@
+
+server:
+  port: 8085
+  servlet.context-path: "/api"
+
+spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:shortener-db
+    username: root
+    password: root
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+shortener-api:
+  exceptions:
+    shortener:
+      1404:
+        message: "Link not found with id %s"
+        http-code: 404
+        exception-code: 1404
